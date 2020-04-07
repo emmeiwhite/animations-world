@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  background-color: skyblue;
+  text-align: center;
+}
+
+/* --- transform: properties
+  Note: Works only on the elements with display:block or display:inline-block properties
+--- */
+img {
+  display: inline-block;
+}
+
+.circle {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background: pink;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  transition: background 1s linear, transform 1s linear;
+}
+
+.circle:hover {
+  background: salmon;
+  transform: rotate(360deg);
+}
