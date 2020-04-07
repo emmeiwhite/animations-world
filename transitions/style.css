@@ -15,7 +15,7 @@
   Note: Works only on the elements with display:block or display:inline-block properties
 --- */
 img {
-  display: block;
+  display: inline-block;
 }
 
 .circle {
@@ -23,6 +23,18 @@ img {
   width: 100px;
   border-radius: 50%;
   background: pink;
-  color: red;
-  line-height: 1.5;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  transition: background 1s linear, transform 1s linear;
+}
+
+.circle:hover {
+  background: salmon;
+  transform: rotate(360deg);
 }
