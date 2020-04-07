@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  background-color: skyblue;
+}
+
+/* --- transform: properties
+  Note: Works only on the elements with display:block or display:inline-block properties
+--- */
+img {
+  display: inline-block;
+}
+
+.cloud1 {
+  transform: translate(50px, 30px);
+}
+
+.cloud2 {
+  transform: rotate(-30deg);
+}
+
+.cloud3 {
+  transform: skew(40deg);
+}
+
+.cloud4 {
+  transform: scale(1.1);
+}
+
+.cloud5 {
+  transform: scale(0.5);
+}
