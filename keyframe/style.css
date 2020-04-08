@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.sky,
+.grass,
+.road,
+.lines {
+  position: relative;
+  width: 100vw;
+}
+
+.sky {
+  height: 40vh;
+  background-color: skyblue;
+}
+
+.grass {
+  height: 30vh;
+  background-color: seagreen;
+}
+
+.road {
+  height: 30vh;
+  background-color: dimgray;
+  border: 10px solid grey;
+  border-left: none;
+  border-right: none;
+}
+
+.lines {
+  position: absolute;
+  top: 50%;
+  border-top: 5px dashed #fff;
+  height: 0px;
+  z-index: 10;
+}
+
+.mario {
+  height: 60%;
+  position: absolute;
+  top: -2rem;
+  left: 0;
+  animation-name: mario;
+  animation-duration: 5s;
+  /* animation-fill-mode: forwards;
+  animation-fill-mode: backwards; */
+  animation-fill-mode: both;
+  /* animation-delay: 2s; */
+
+  /* --- Repeating the Animation --- */
+  animation-iteration-count: infinite;
+}
+
+@keyframes mario {
+  from {
+    transform: translateX(-10vw);
+  }
+
+  to {
+    transform: translateX(100vw);
+  }
+}
+/*// ELEMENTS TO ANIMATE //*/
+
+/*// KEYFRAMES //*/
