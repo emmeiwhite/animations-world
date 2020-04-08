@@ -9,6 +9,47 @@ body {
   width: 100vw;
 }
 
+.sky,
+.grass,
+.road,
+.lines {
+  position: relative;
+  width: 100vw;
+}
+
+.sky {
+  height: 40vh;
+  background-color: skyblue;
+}
+
+.grass {
+  height: 30vh;
+  background-color: seagreen;
+}
+
+.road {
+  height: 30vh;
+  background-color: dimgray;
+  border: 10px solid grey;
+  border-left: none;
+  border-right: none;
+}
+
+.lines {
+  position: absolute;
+  top: 50%;
+  border-top: 5px dashed #fff;
+  height: 0px;
+  z-index: 10;
+}
+
+.mario {
+  height: 60%;
+  position: absolute;
+  top: -2rem;
+  left: 0;
+}
+
 /*// ELEMENTS TO ANIMATE //*/
 
 /*// KEYFRAMES //*/
