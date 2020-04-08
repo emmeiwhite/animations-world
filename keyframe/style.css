@@ -45,34 +45,43 @@ body {
 }
 
 /*// ELEMENTS TO ANIMATE //*/
-.mario,
-.luigi {
+.mario {
   height: 50%;
   position: absolute;
   top: -2rem;
   left: 0;
-  animation-name: mario;
-  animation-duration: 8s;
+  /* --- Chaining the animation --- */
+  animation: drive 8s both infinite linear, jump 0.3s 1.2s ease;
+
   /* animation-fill-mode: forwards;
   animation-fill-mode: backwards; */
-  animation-fill-mode: both;
   /* animation-delay: 2s; */
 
   /* --- Repeating the Animation --- */
-  animation-iteration-count: infinite;
+  /* animation-iteration-count: infinite; */
 
   /* --- animation timing function --- */
+  /* animation-fill-mode: both; */
+  /* animation-delay: 2s; */
 
+  /* --- Repeating the Animation --- */
+  /* animation-iteration-count: infinite; */
   /* animation-timing-function: ease-in; */
-  animation-timing-function: linear;
+  /* animation-timing-function: linear; */
 }
 
 .luigi {
-  /* animation-direction: reverse; */
-  animation-duration: 5s;
+  height: 50%;
+  position: absolute;
+  animation: drive 5s both linear infinite;
   top: 4rem;
+  /* animation-direction: reverse; */
+  /* animation-duration: 5s; */
+  /* animation-fill-mode: both; */
   /* animation-timing-function: ease-out; */
-  animation-timing-function: linear;
+  /* animation-timing-function: linear; */
+  /* --- Repeating the Animation --- */
+  /* animation-iteration-count: infinite; */
 
   /* --- We can use own function --- */
   /* animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275); */
@@ -97,7 +106,7 @@ body {
   animation: wind 50s linear infinite reverse;
 }
 /* --- // KEYFRAMES // --- */
-@keyframes mario {
+@keyframes drive {
   from {
     transform: translateX(-10vw);
   }
@@ -124,5 +133,21 @@ body {
 
   to {
     left: 100%;
+  }
+}
+
+/* --- Chaining Animations --- */
+
+@keyframes jump {
+  0% {
+    top: -2rem;
+  }
+
+  50% {
+    top: -4rem;
+  }
+
+  100% {
+    top: -2rem;
   }
 }
