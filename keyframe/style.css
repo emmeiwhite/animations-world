@@ -60,12 +60,19 @@ body {
 
   /* --- Repeating the Animation --- */
   animation-iteration-count: infinite;
+
+  /* --- animation timing function --- */
+
+  /* animation-timing-function: ease-in; */
+  animation-timing-function: linear;
 }
 
 .luigi {
   animation-direction: reverse;
   animation-duration: 5s;
   top: 4rem;
+  /* animation-timing-function: ease-out; */
+  animation-timing-function: linear;
 }
 /* --- // KEYFRAMES // --- */
 @keyframes mario {
