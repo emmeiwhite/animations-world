@@ -38,3 +38,28 @@ img {
   background: salmon;
   transform: rotate(360deg);
 }
+
+
+
+
+/* ---
+const dataArray= [
+    {id: 1, label: "Hello", color: "red", sorting: 0},
+    {id: 2, label: "World", color: "green", sorting: 1},
+    {id: 5, label: "Hello", color: "red", sorting: 6},
+    {id: 1, label: "Hello", color: "red", sorting: 0},
+    {id: 2, label: "World", color: "green", sorting: 1}
+]
+
+const t = dataArray.map(tag=>tag.id);
+const unique = [... new Set(t)];
+console.log(unique);
+
+const filtered = dataArray.filter((obj,index)=>{
+    return obj.id == unique[index];
+});
+
+
+console.log(filtered);
+
+---*/
