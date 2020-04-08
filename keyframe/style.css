@@ -41,16 +41,18 @@ body {
   top: 50%;
   border-top: 5px dashed #fff;
   height: 0px;
-  z-index: 10;
+  /* z-index: 10; */
 }
 
-.mario {
-  height: 60%;
+/*// ELEMENTS TO ANIMATE //*/
+.mario,
+.luigi {
+  height: 50%;
   position: absolute;
   top: -2rem;
   left: 0;
   animation-name: mario;
-  animation-duration: 5s;
+  animation-duration: 8s;
   /* animation-fill-mode: forwards;
   animation-fill-mode: backwards; */
   animation-fill-mode: both;
@@ -58,8 +60,43 @@ body {
 
   /* --- Repeating the Animation --- */
   animation-iteration-count: infinite;
+
+  /* --- animation timing function --- */
+
+  /* animation-timing-function: ease-in; */
+  animation-timing-function: linear;
 }
 
+.luigi {
+  /* animation-direction: reverse; */
+  animation-duration: 5s;
+  top: 4rem;
+  /* animation-timing-function: ease-out; */
+  animation-timing-function: linear;
+
+  /* --- We can use own function --- */
+  /* animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275); */
+}
+
+/* ---Cloud--- */
+
+.cloud {
+  position: absolute;
+}
+
+.cloud:nth-child(1) {
+  width: 200px;
+  opacity: 0.5;
+  top: 100px;
+  animation: wind 80s linear infinite reverse;
+}
+
+.cloud:nth-child(2) {
+  width: 300px;
+  top: 0;
+  animation: wind 50s linear infinite reverse;
+}
+/* --- // KEYFRAMES // --- */
 @keyframes mario {
   from {
     transform: translateX(-10vw);
@@ -69,6 +106,23 @@ body {
     transform: translateX(100vw);
   }
 }
-/*// ELEMENTS TO ANIMATE //*/
 
-/*// KEYFRAMES //*/
+@keyframes luigi {
+  from {
+    transform: translateX(-10vw);
+  }
+
+  to {
+    transform: translateX(100vw);
+  }
+}
+
+@keyframes wind {
+  from {
+    left: -100px;
+  }
+
+  to {
+    left: 100%;
+  }
+}
