@@ -48,8 +48,19 @@ body {
   position: absolute;
   top: -2rem;
   left: 0;
+  animation-name: mario;
+  animation-duration: 3s;
 }
 
+@keyframes mario {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(100vw);
+  }
+}
 /*// ELEMENTS TO ANIMATE //*/
 
 /*// KEYFRAMES //*/
